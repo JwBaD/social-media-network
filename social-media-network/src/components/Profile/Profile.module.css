@@ -2,3 +2,7 @@
     grid-area: cont;
     background-color: cornflowerblue;
 }
+
+.item {
+    color: greenyellow;
+}
