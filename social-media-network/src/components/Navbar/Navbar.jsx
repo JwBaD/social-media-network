@@ -4,19 +4,19 @@ const Navbar = () => {
     return (
         <nav className={navbarModuleCss.nav}>
             <div className={navbarModuleCss.item}>
-                <div>Profile</div>
+                <a href='/profile'>Profile</a>
             </div>
             <div className={navbarModuleCss.item}>
-                <div>Messages</div>
+                <a href='/dialogs'>Messages</a>
             </div>
             <div className={navbarModuleCss.item}>
-                <div>News</div>
+                <a href='/news'>News</a>
             </div>
             <div className={navbarModuleCss.item}>
-                <div>Music</div>
+                <a href='/music'>Music</a>
             </div>
             <div className={navbarModuleCss.item}>
-                <div>Settings</div>
+                <a href='/settings'>Settings</a>
             </div>
         </nav>
     );
