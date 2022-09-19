@@ -1,5 +1,7 @@
-import s from './MyPosts.module.css';
+import myPostModuleCss from './MyPosts.module.css';
 import Post from './Post/Post';
+
+const posts = myPostModuleCss.posts;
 
 const MyPosts = () => {
     return (
@@ -10,7 +12,7 @@ const MyPosts = () => {
                 <button>Add post</button>
                 <button>Remove</button>
             </div>
-            <div className={s.posts}>
+            <div className={posts}>
                 <Post message="It's my first post" likesCount="20" />
                 <Post message="Some text" likesCount="46" />
             </div>
