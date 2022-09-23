@@ -1,12 +1,10 @@
 import MyPosts from './MyPosts/MyPosts';
+import ProfileInfo from './ProfileInfo/ProfileInfo'
 
-const Profile = () => {
+const Profile = (props) => {
     return (
         <div>
-            <div>
-                <img src="https://www.w3schools.com/css/img_5terre_wide.jpg" alt="some-image" />
-            </div>
-            <div>ava + description</div>
+            <ProfileInfo />
             <MyPosts />
         </div>
     );

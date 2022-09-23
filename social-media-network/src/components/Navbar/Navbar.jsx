@@ -1,28 +1,24 @@
 import navbarModuleCss from './Navbar.module.css';
 import { NavLink } from 'react-router-dom';
 
-const active = navbarModuleCss.active;
-const item = navbarModuleCss.item;
-const nav = navbarModuleCss.nav;
+const activeLink = ({isActive}) => isActive ? navbarModuleCss.active : navbarModuleCss.item;
 
-const activeLink = ({isActive}) => isActive ? active : item;
-
-const Navbar = () => {
+const Navbar = (props) => {
     return (
-        <nav className={nav}>
-            <div className={item}>
+        <nav className={navbarModuleCss.nav}>
+            <div className={navbarModuleCss.item}>
                 <NavLink to='/profile' className={activeLink}>Profile</NavLink>
             </div>
-            <div className={item}>
+            <div className={navbarModuleCss.item}>
                 <NavLink to='/dialogs' className={activeLink}>Dialogs</NavLink>
             </div>
-            <div className={item}>
+            <div className={navbarModuleCss.item}>
                 <NavLink to='/news' className={activeLink}>News</NavLink>
             </div>
-            <div className={item}>
+            <div className={navbarModuleCss.item}>
                 <NavLink to='/music' className={activeLink}>Music</NavLink>
             </div>
-            <div className={item}>
+            <div className={navbarModuleCss.item}>
                 <NavLink to='/settings' className={activeLink}>Settings</NavLink>
             </div>
         </nav>

@@ -1,10 +1,8 @@
 import musicModuleCss from './Music.module.css'
 
-const content = musicModuleCss.content;
-
 const Music = (props) => {
     return (
-        <div className={content}>
+        <div className={musicModuleCss.content}>
             Music
         </div>
     );

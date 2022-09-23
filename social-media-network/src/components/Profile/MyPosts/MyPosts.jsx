@@ -1,18 +1,21 @@
-import myPostModuleCss from './MyPosts.module.css';
+import myPostsModuleCss from './MyPosts.module.css';
 import Post from './Post/Post';
 
-const posts = myPostModuleCss.posts;
-
-const MyPosts = () => {
+const MyPosts = (props) => {
     return (
         <div>
-            <div>My posts</div>
-            <div>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <button>Add post</button>
-                <button>Remove</button>
+            <div className={myPostsModuleCss.postsBlock}>
+                <h3>My posts</h3>
             </div>
-            <div className={posts}>
+            <div>
+                <div>
+                    <textarea></textarea>
+                </div>
+                <div>
+                    <button>Add post</button>
+                </div>
+            </div>
+            <div className={myPostsModuleCss.posts}>
                 <Post message="It's my first post" likesCount="20" />
                 <Post message="Some text" likesCount="46" />
             </div>
