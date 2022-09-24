@@ -13,8 +13,13 @@ const MyPosts = (props) => {
             id: 2,
             message: 'I like it!',
             likesCount: 46
-        },
+        }
     ];
+
+    const postsDataMap = postsData
+        .map(element => <Post message={element.message} likesCount={element.likesCount} />
+    );
+
 
     return (
         <div>
@@ -30,8 +35,7 @@ const MyPosts = (props) => {
                 </div>
             </div>
             <div className={myPostsModuleCss.posts}>
-                <Post message={postsData[0].message} likesCount={postsData[0].likesCount} />
-                <Post message={postsData[1].message} likesCount={postsData[1].likesCount} />
+                {postsDataMap}
             </div>
         </div>
     );

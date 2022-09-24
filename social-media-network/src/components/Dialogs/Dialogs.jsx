@@ -22,7 +22,8 @@ const Dialogs = (props) => {
     const dialogsData = [
         {
             id: 1,
-            name: 'UserName1'},
+            name: 'UserName1'
+        },
         {
             id: 2,
             name: 'UserName2'
@@ -72,20 +73,21 @@ const Dialogs = (props) => {
         },
     ];
 
+    const dialogsDataMap = dialogsData
+        .map(element => <DialogItem id={element.id} name={element.name} />
+    );
+
+    const messagesDataMap = messagesData
+        .map(element => <Message message={element.message} />
+    );
+
     return (
         <div className={dialogsModuleCss.dialogs}>
             <div className={dialogsModuleCss.dialogsItems}>
-                <DialogItem id={dialogsData[0].id} name={dialogsData[0].name} />
-                <DialogItem id={dialogsData[1].id} name={dialogsData[1].name} />
-                <DialogItem id={dialogsData[2].id} name={dialogsData[2].name} />
-                <DialogItem id={dialogsData[3].id} name={dialogsData[3].name} />
-                <DialogItem id={dialogsData[4].id} name={dialogsData[4].name} />
-                <DialogItem id={dialogsData[5].id} name={dialogsData[5].name} />
+                {dialogsDataMap}
             </div>
             <div className={dialogsModuleCss.messages}>
-                <Message message={messagesData[0].message} />
-                <Message message={messagesData[1].message} />
-                <Message message={messagesData[2].message} />
+                {messagesDataMap}
             </div>
         </div>
     );
