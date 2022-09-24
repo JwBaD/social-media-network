@@ -2,6 +2,20 @@ import myPostsModuleCss from './MyPosts.module.css';
 import Post from './Post/Post';
 
 const MyPosts = (props) => {
+
+    const postsData = [
+        {
+            id: 1,
+            message: 'Its my first post',
+            likesCount: 7
+        },
+        {
+            id: 2,
+            message: 'I like it!',
+            likesCount: 46
+        },
+    ];
+
     return (
         <div>
             <div className={myPostsModuleCss.postsBlock}>
@@ -16,8 +30,8 @@ const MyPosts = (props) => {
                 </div>
             </div>
             <div className={myPostsModuleCss.posts}>
-                <Post message="It's my first post" likesCount="20" />
-                <Post message="Some text" likesCount="46" />
+                <Post message={postsData[0].message} likesCount={postsData[0].likesCount} />
+                <Post message={postsData[1].message} likesCount={postsData[1].likesCount} />
             </div>
         </div>
     );
