@@ -1,4 +1,4 @@
-import ProfileInfoModuleCss from './ProfileInfo.module.css'
+import ProfileInfoModuleCss from './ProfileInfo.module.css';
 
 const ProfileInfo = (props) => {
     return (

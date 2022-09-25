@@ -1,4 +1,4 @@
-import musicModuleCss from './Music.module.css'
+import musicModuleCss from './Music.module.css';
 
 const Music = (props) => {
     return (

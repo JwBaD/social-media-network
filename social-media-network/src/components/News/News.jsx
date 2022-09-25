@@ -1,4 +1,4 @@
-import newsModuleCss from './News.module.css'
+import newsModuleCss from './News.module.css';
 
 const News = (props) => {
     return (

@@ -1,5 +1,5 @@
 import myPostsModuleCss from './MyPosts.module.css';
-import Post from './Post/Post';
+import Post from './Post/Post.jsx';
 
 const MyPosts = (props) => {
 
