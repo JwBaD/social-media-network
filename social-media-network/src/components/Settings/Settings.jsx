@@ -1,8 +1,8 @@
-import settingsModuleCss from './Settings.module.css';
+import s from './Settings.module.css';
 
 const Settings = (props) => {
     return (
-        <div className={settingsModuleCss.content}>
+        <div className={s.content}>
             Settings
         </div>
     );

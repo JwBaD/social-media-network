@@ -1,9 +1,9 @@
-import postModuleCss from './Post.module.css';
+import s from './Post.module.css';
 
 const Post = (props) => {
     return (
         <div>
-            <div className={postModuleCss.item}>
+            <div className={s.item}>
                 <img src="https://pickaface.net/gallery/avatar/19242458_180728_2138_981a7j.png" alt="some-avatar" />
                 {props.message}
                 <div>

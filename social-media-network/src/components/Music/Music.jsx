@@ -1,8 +1,8 @@
-import musicModuleCss from './Music.module.css';
+import s from './Music.module.css';
 
 const Music = (props) => {
     return (
-        <div className={musicModuleCss.content}>
+        <div className={s.content}>
             Music
         </div>
     );

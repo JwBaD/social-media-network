@@ -1,8 +1,8 @@
-import newsModuleCss from './News.module.css';
+import s from './News.module.css';
 
 const News = (props) => {
     return (
-        <div className={newsModuleCss.content}>
+        <div className={s.content}>
             News
         </div>
     );

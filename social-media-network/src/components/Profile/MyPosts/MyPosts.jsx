@@ -1,29 +1,13 @@
-import myPostsModuleCss from './MyPosts.module.css';
+import s from './MyPosts.module.css';
 import Post from './Post/Post.jsx';
 
 const MyPosts = (props) => {
 
-    const postsData = [
-        {
-            id: 1,
-            message: 'Its my first post',
-            likesCount: 7
-        },
-        {
-            id: 2,
-            message: 'I like it!',
-            likesCount: 46
-        }
-    ];
-
-    const postsDataMap = postsData
-        .map(element => <Post message={element.message} likesCount={element.likesCount} />
-    );
-
+    let postsElement = props.posts.map(p => <Post message={p.message} likesCount={p.likesCount} />);
 
     return (
         <div>
-            <div className={myPostsModuleCss.postsBlock}>
+            <div className={s.postsBlock}>
                 <h3>My posts</h3>
             </div>
             <div>
@@ -34,8 +18,8 @@ const MyPosts = (props) => {
                     <button>Add post</button>
                 </div>
             </div>
-            <div className={myPostsModuleCss.posts}>
-                {postsDataMap}
+            <div className={s.posts}>
+                {postsElement}
             </div>
         </div>
     );
